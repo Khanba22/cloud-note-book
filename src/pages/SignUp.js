@@ -87,7 +87,7 @@ function SignUp() {
       body: JSON.stringify(details)
     }
     if (formValid()) {
-      await fetch("/signup", options).then((response => response.json())).then((response) => {
+      await fetch("https://cloudnotebook-2uop.onrender.com/signup", options).then((response => response.json())).then((response) => {
         console.log(response)
         if (response === "Account Creation Successful") {
           setRespond(true)

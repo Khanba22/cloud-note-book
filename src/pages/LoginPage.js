@@ -62,7 +62,7 @@ function LoginPage() {
       body: JSON.stringify(loginData)
     }
     try {
-      await fetch("https://jsonplaceholder.typicode.com/todos/1", options)
+      await fetch("https://cloudnotebook-2uop.onrender.com/login", options)
         .then((response => response.json())).then((response) => {
           console.log(response)
           if (response === "Login SuccessFul") {

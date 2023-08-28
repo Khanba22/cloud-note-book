@@ -299,14 +299,6 @@
 
 	}
 
-	.notebook-button-box{
-		position: relative;
-		display: flex;
-		bottom: 0;
-		right: 0;
-		height: 50%;
-		width: 40%;
-	}
 
 	#signupheading {
 		position: relative;

@@ -4,6 +4,7 @@ import "./StyleSheets/cloudnotebook.css"
 import edit from "./images/edit.png"
 import cross from './images/cross.png'
 import share from "./images/paper-plane.png"
+import plus from "./images/plus.png"
 
 function CloudNoteBook(props) {
 
@@ -28,7 +29,7 @@ function CloudNoteBook(props) {
             body: JSON.stringify(userData)
         }
 
-        await fetch("/cloudnotebook", options).then((response => response.json())).then((response) => {
+        await fetch("https://cloudnotebook-2uop.onrender.com/cloudnotebook", options).then((response => response.json())).then((response) => {
             setData(response.notes)
             setNickname(response.nickname)
         })
@@ -56,7 +57,7 @@ function CloudNoteBook(props) {
                 },
                 body: JSON.stringify(noteData)
             }
-            await fetch("/cloudnotebook/delete", options).then((res) => {
+            await fetch("https://cloudnotebook-2uop.onrender.com/cloudnotebook/delete", options).then((res) => {
                 console.log(res.json())
             }).catch((err) => {
                 alert(`${err.status} ${err.message}`)
@@ -68,7 +69,8 @@ function CloudNoteBook(props) {
 
     const shareNote = async (e) => {
         console.log(e.target.alt)
-        navigator.clipboard.writeText(`http://localhost:5000/cloudnotebook/share?username=${userData.username}&id=${e.target.alt}`)
+        navigator.clipboard.writeText(`https://cloudnotebook-2uop.onrender.com/cloudnotebook/share?username=${userData.username}&id=${e.target.alt}`)
+        alert("link Copied")
     }
 
     useEffect(() => {
@@ -89,26 +91,23 @@ function CloudNoteBook(props) {
                 <a href="/">Product</a>
                 <a href="/">Solutions</a>
                 <a href="/">Design</a>
-                <a href="/">Enterprise</a>
+                <Link to="/">Log Out</Link>
             </div>
         </nav>
             <div className="notebox">
                 <h1 id='login-heading'>{`Welcome ${nickname}`}</h1>
                 <div className="note-scroll">
-                    <div className='note' id='newnote'>
-                        <h2><Link state={{
-                            username: userData.username,
-                            _id: null,
-                            title: "Title",
-                            content: null
-                        }} style={{ fontSize: "0.6em" }} to="/cloudnotebook/notes">
-                            <div>
+                    <Link state={{
+                        username: userData.username,
+                        _id: null,
+                        title: "Title",
+                        content: null
+                    }} style={{ fontSize: "0.6em",width:"90%" }} to="/cloudnotebook/notes"> <div className='note' id='newnote'>
+                            <img src={plus} alt="" />
+                            <h2>
                                 <h2>Create New Note</h2>
-                                <br />
-                                <br />
-                            </div></Link>
-                        </h2>
-                    </div>
+                            </h2>
+                        </div></Link>
                     {data.map(el => {
                         const prop = { username: userData.username, _id: el._id, title: el.title, content: el.content }
                         return <>
@@ -118,7 +117,7 @@ function CloudNoteBook(props) {
                                 <div className="notebook-button-box">
                                     <button className='iconbutton' onClick={deleteNote} ><img className='icon' src={cross} alt={el._id} /></button>
                                     <button className='iconbutton' ><Link state={prop} to="/cloudnotebook/notes"><img className='icon' src={edit} alt="" /></Link></button>
-                                    <button className='iconbutton'  alt={el._id} ><img onClick={shareNote} className='icon' src={share} alt={el._id} /></button>
+                                    <button className='iconbutton' alt={el._id} ><img onClick={shareNote} className='icon' src={share} alt={el._id} /></button>
                                 </div>
                             </div>
                         </>

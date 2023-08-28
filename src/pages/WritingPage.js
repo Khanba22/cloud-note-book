@@ -38,7 +38,7 @@ function WritingPage() {
             },
             body: JSON.stringify(note)
         }
-        await fetch("/cloudnotebook/notes", options).then((data) => {
+        await fetch("https://cloudnotebook-2uop.onrender.com/cloudnotebook/notes", options).then((data) => {
             data.json()
         }).then((res) => { console.log(res) })
         // console.log(data)
