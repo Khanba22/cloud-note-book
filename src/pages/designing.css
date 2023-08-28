@@ -1,0 +1,23 @@
+
+.innerbox{
+    height:80vh;
+    aspect-ratio: 1/1.1;
+    display: flex;
+    background: green;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.note {
+    width: 200px;
+    height: 300px;
+    margin: 20px 5vw;
+    background-color: blue;
+}
+
+#newnote{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

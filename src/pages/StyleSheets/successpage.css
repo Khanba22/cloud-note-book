@@ -1,0 +1,47 @@
+.image {
+    width: 86%;
+    aspect-ratio: 1;
+    margin: 10px 5%;
+    position: relative;
+    top: 5%;
+}
+
+#success-heading {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.6rem;
+    position: relative;
+    top: 8%;
+}
+
+#success-heading h2:nth-child(1){
+    text-align: center;
+    font-size: 3rem;
+}
+#success-heading h2:nth-child(2){
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+
+.success__submit {
+    position: relative;
+    left: 21.5%;
+    right: 22.5%;
+    background: #0fcd1f;
+    font-size: 14px;
+    padding: 9px 5px;
+    border-radius: 26px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    border: none;
+    outline: none;
+    width: 55%;
+    color: white;
+    box-shadow: 0px 2px 2px #00ff15;
+    cursor: pointer;
+    transition: .2s;
+    align-items: center;
+    justify-content: center;
+}

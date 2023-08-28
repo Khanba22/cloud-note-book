@@ -1,0 +1,99 @@
+input::placeholder,
+span {
+    font-size: 0.8rem;
+}
+
+.navbar {
+    margin: 10px 0;
+    height: 12vh;
+    background: radial-gradient(#7e7bb9, #5f57a3);
+    display: flex;
+    width: 100%;
+    /* background: radial-gradient(black, transparent); */
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.logo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 2px 5px #1c145e;
+    color: #eceaff;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 2px 5px #1c145e;
+    color: #eceaff;
+}
+
+nav a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+
+.tab {
+    margin: 10px;
+}
+
+@media screen and (max-width:100vh) {
+    /* width<height */
+
+
+
+    .logo {
+        font-size: 10vw;
+    }
+
+    * {
+        font-size: 0.8rem;
+    }
+
+
+
+    .tabholder {
+        width: 100%;
+        display: flex;
+        align-content: stretch;
+        /* justify-content: flex-end; */
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-height:100vw) {
+    /* height<width */
+
+    .banner {
+        height: 40vh;
+        width: 100vw;
+        position: absolute;
+        background: url("https://tse3.mm.bing.net/th?id=OIP.Pcfp-0DfkaO4Y5eaLpbx2gHaCP&pid=Api&P=0&h=180");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .logo {
+        font-size: 10vh;
+    }
+
+    #container {
+        /* margin: 6vh 0 0 0; */
+    }
+
+    .navbar {
+        padding: 0px 30px;
+    }
+
+    .tabholder {
+        display: flex;
+        align-content: stretch;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}

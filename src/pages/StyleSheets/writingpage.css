@@ -1,0 +1,206 @@
+.editor-panel {
+    height: 95%;
+    width: 95%;
+    display: flex;
+    position: relative;
+    left: 5vw;
+}
+
+.editor-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 90vw;
+    margin: 0;
+    padding: 0;
+}
+
+.colorPicker .react-colorful {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.toolbar button {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    outline: none;
+    background-color: #858585;
+    border-radius: 5px;
+    border: 1px solid rgb(88, 84, 84);
+    padding: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#background-selector{
+    width: 80%;
+    height: 80%;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.toolbar button:hover {
+    transition: 0.4s;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.react-colorful {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 360px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.toolbar button img {
+    height: 100%;
+    width: 100%;
+}
+
+.toolbar {
+    color: black;
+    height: 90%;
+    border-radius: 10px 0px 0px 10px;
+    background-color: rgb(201, 189, 189);
+    padding: 20px 5px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    width: 5%;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    -webkit-border-radius: 10px 0px 0px 10px;
+    -moz-border-radius: 10px 0px 0px 10px;
+    -ms-border-radius: 10px 0px 0px 10px;
+    -o-border-radius: 10px 0px 0px 10px;
+}
+
+
+.editor {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 90%;
+    width: 80%;
+    overflow-y: scroll;
+    scrollbar-width: 0;
+}
+
+.editor-screen::-webkit-scrollbar{
+    display: none;
+}
+
+.editor *{
+    word-wrap: break-word;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 18px;
+}
+.editor::placeholder{
+    color: wheat;
+}
+
+/* Button styles */
+
+
+
+.title-input {
+    background-color: transparent;
+    outline: none;
+    padding: 20px;
+    color: white;
+    width: 60%;
+    height: 60px;
+    font-size: 3rem;
+    text-decoration: underline;
+    outline: none;
+    border: none;
+    text-align: center;
+    margin: 20px;
+}
+
+
+@media screen and (max-width:850px) {
+    .editor {
+        border: 1px solid #ccc;
+        padding: 10px;
+        height: 78%;
+        width: 100%;
+        font-size: 24px;
+    }
+    .toolbar {
+        color: black;
+        height: 13%;
+        border-radius: 10px 0px 0px 10px;
+        background-color: rgb(201, 189, 189);
+        padding: 20px 5px;
+        display: flex;
+        gap: 10px;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        width: 100%;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        -webkit-border-radius: 10px 0px 0px 10px;
+        -moz-border-radius: 10px 0px 0px 10px;
+        -ms-border-radius: 10px 0px 0px 10px;
+        -o-border-radius: 10px 0px 0px 10px;
+    }
+    .editor-panel {
+        height: 95%;
+        width: 95%;
+        display: flex;
+        position: relative;
+        left: 5vw;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
