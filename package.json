@@ -1,7 +1,7 @@
 {
   "name": "cloudnotebook",
   "version": "0.1.0",
-  "homepage": "https://regal-gecko-f19926.netlify.app/",
+  "homepage": "https://gh-pages--sunny-nougat-1e5f78.netlify.app/",
   "private": true,
   "proxy": "http://localhost:5000",
   "dependencies": {
